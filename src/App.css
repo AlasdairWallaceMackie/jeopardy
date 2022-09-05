@@ -1,5 +1,17 @@
-body{
-    background-color: lightblue;
+#game-board{
+    background-color: rgb(1, 0, 106);
+    width: fit-content;
+    border: 3px solid black;
+}
+
+#current-question{
+    background-color: rgb(21, 26, 180);
+    border: 3px solid black
+}
+#current-question--close{
+    position: absolute;
+    top: 2px;
+    right: 2px;
 }
 
 .game-column{
@@ -10,10 +22,12 @@ body{
     text-align: center;
 }
 .game-column--category{
-    height: 5rem;
+    height: 6rem;
     display: flex;
     justify-content: center;
     align-items: middle;
+    border-bottom: 5px solid black;
+    padding: 1rem;
 }
 
 .game-question{
@@ -21,4 +35,12 @@ body{
     border-bottom: 3px solid black;
     padding: 2rem 0;
     cursor: pointer;
+}
+
+.drop-shadow{
+    filter: drop-shadow(3px 3px 1px black)
+}
+
+.blur{
+    filter: blur(6px);
 }
