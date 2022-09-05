@@ -1,16 +1,12 @@
 import React from "react"
 
 export default function Question(props){
-    function showQuestion(){
-        console.log("Show Question")
-    }
-    
     return (
-        <div 
+        <div
             className="game-question"
-            onClick={showQuestion}
+            onClick={props.activateQuestion}
         >
-            <h1>${props.dollarAmount}</h1>
+            <h1 className="text-warning fw-bold drop-shadow">${props.dollarAmount}</h1>
         </div>
     )
 }
