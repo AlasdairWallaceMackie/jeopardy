@@ -4,12 +4,13 @@ import {nanoid} from "nanoid"
 import Question from "./Question"
 
 export default function Column(props){
-    const questionList = [1,2,3,4,5] // PLACEHOLDER - Data will be pulled from spreadsheet
-    const questionElements = questionList.map((item, index) => (
+    const questionElements = props.questions.map((item, index) => (
         <Question
             key={nanoid()}
             activateQuestion={props.activateQuestion}
             dollarAmount={(index+1) * 200}
+            question={item.question}
+            answer={item.answer}
         />
     ))
     
